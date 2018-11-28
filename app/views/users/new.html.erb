@@ -1,0 +1,40 @@
+<h1>ユーザー登録</h1>
+
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <%= pluralize(@user.errors.count, "error") %>prohibited this @user from being saved
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_with(model: @user, local: true) do |f| %>
+  <table>
+    <tr>
+      <th><%= f.label "お名前" %></th>
+      <td><%= f.text_field :name,  placeholder: :"山田太郎", class: "text-area" %></td>
+    </tr>
+
+    <tr>
+      <th><%= f.label "メールアドレス" %></th>
+      <td><%= f.email_field :email, placeholder: "@mail.mail", class: "text-area" %></td>
+    </tr>
+
+    <tr>
+      <th>
+        <%= f.label "パスワード" %>
+        <p class = "password-instruction" >8桁以上</p>
+      </th>
+      <td><%= f.password_field :password, class: "text-area" %></td>
+    </tr>
+
+    <tr>
+      <th><%= f.label "パスワード確認" %></th>
+      <td><%= f.password_field :password_confirmation, class: "text-area" %></td>
+    </tr>
+  </table>
+  <%= f.submit "登録する", class: "btn btn-info" %>
+<% end %>

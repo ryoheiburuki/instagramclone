@@ -1,0 +1,20 @@
+<p><%= @user.name %>さん、こんにちは</p>
+
+<% if @user.favorite_pictures.present? %>
+  <h4 class = 'favorite-info'>お気に入り登録した画像一覧</h4>
+  <% @user.favorite_pictures.each do |picture| %>
+    <article class="picture-index">
+      <div class = "posting-user bottom-border">
+        <%= picture.user.name %>
+      </div>
+      <div class = "contributed-picture bottom-border">
+        <%= image_tag picture.image_url %>
+      </div>
+      <div class = "contributed-sentence bottom-border">
+        <%= picture.sentence %>
+      </div>
+    </article>
+  <% end %>
+<%else%>
+  <h4 class = 'no-favorite-info'>お気に入り登録された画像はありません。</h4>
+<% end %>

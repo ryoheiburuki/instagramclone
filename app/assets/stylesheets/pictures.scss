@@ -1,0 +1,219 @@
+// Place all the styles related to the pictures controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html{
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body{
+  height: 100%;
+  margin: 0;
+}
+
+.insta-gradation{
+  background: radial-gradient(circle farthest-corner at 32% 106%, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), linear-gradient(135deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+}
+
+.container{
+  position: relative;
+  margin: 0 auto;
+  min-height: 100%;
+  width: 100%;
+  padding: 0px 0px 70px 0px;
+  background: #f2f2f2;
+}
+
+header{
+  font-size: 4rem;
+  font-weight: bold;
+  height: 70px;
+  width: 100%;
+  display: table;
+}
+
+.header{
+  margin: auto;
+  text-align: center;
+  height: 50px;
+  width: 500px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.content{
+  width: 960px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+nav{
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav{
+  list-style: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.login-nav{
+  margin: 0 180px 30px 180px;
+}
+
+.logout-nav{
+  margin: 0 230px 30px 230px;
+}
+
+.nav li{
+  background:#ccc;
+  border-bottom: solid 2px;
+  border-right: solid 2px;
+  border-left: solid 2px;
+  // padding: 5px 20px;
+  float: left;
+  margin-right: 1px;
+  display: inline;
+}
+
+.login-nav li{
+  width: 148px;
+  margin: 0 1px;
+}
+
+.logout-nav li{
+  width: 148px;
+  margin: 0 1px;
+}
+
+.logout-nav .long-nav{
+  width: 198px;
+}
+
+li.select{
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.bottom-border{
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: #aaa;
+}
+
+.posting-user{
+  font-size: 1.8rem;
+  height: 31px;
+}
+
+.contributed-picture{
+  width: 600px;
+}
+
+.contributed-sentence{
+  padding: 10px;
+  text-align: left;
+}
+
+.index-button{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.btn{
+  margin: 0 20px;
+}
+
+.picture-index{
+  width: 602px;
+  border: solid;
+  border-width: 1px;
+  border-color: #aaa;
+  margin-bottom: 50px;
+  background-color: #fff;
+  margin: auto 179px 30px 179px;
+}
+
+table{
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+tr{
+  height: 50px;
+}
+
+th{
+  width: 140px;
+  margin-right: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+td{
+  width: 500px;
+}
+
+.text-area{
+  height: 3rem;
+  width: 400px;
+  border-radius: 5px;
+}
+
+.password-instruction{
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.sentence-area{
+  height: 10rem;
+  width: 400px;
+  border-radius: 5px;
+}
+
+.image-form{
+  padding-left: 50px;
+}
+
+.favotire-info{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.no-favorite-info{
+  margin-top: 30px;
+}
+
+.confirm-sentence-wrapper{
+  width: 600px;
+  margin: 30px auto;
+}
+
+.confirm-sentence{
+  text-align: left;
+}
+
+.btn-warning{
+  margin-top: 20px
+}
+
+footer{
+  height: 5rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: table;
+}
+
+.footer{
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.footer p{
+  margin: 0;
+}

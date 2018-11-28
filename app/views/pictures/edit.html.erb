@@ -1,0 +1,27 @@
+<%= form_with model: @picture, local: true do |form| %>
+
+  <% if @picture.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @picture.errors.count %>件のエラーがあります。</h2>
+      <ul>
+        <% @picture.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table>
+    <tr>
+      <%= image_tag @picture.image_url %>
+    </tr>
+
+    <tr>
+      <th><%= form.label "文章" %></th>
+      <td><%= form.text_area :sentence, class: 'sentence-area', placeholder: :"文章" %></td>
+    </tr>
+  </table>
+  <div class="actions">
+    <%= form.submit "送信", class: "btn btn-info" %>
+  </div>
+<% end %>

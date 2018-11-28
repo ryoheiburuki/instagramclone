@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Instaclone</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class = 'container'>
+      <header class = insta-gradation>
+        <div class = 'header'>
+          InstaClone
+        </div>
+      </header>
+      <div class = 'content'>
+        <nav>
+          <% if logged_in? %>
+            <ul class = 'nav login-nav'>
+              <li><%= link_to "マイページ", user_path(current_user.id) %></li>
+              <li><%= link_to "新規投稿", new_picture_path %></li>
+              <li><%= link_to "投稿一覧", pictures_path %></li>
+              <li><%= link_to "ログアウト", session_path(current_user.id), method: :delete %></li>
+            </ul>
+            <% else %>
+            <ul class = 'nav logout-nav'>
+              <li class = 'long-nav'><%= link_to "ユーザー登録する", new_user_path %></li>
+              <li><%= link_to "ログイン", new_session_path %></li>
+              <li><%= link_to "投稿一覧", pictures_path %></li>
+            </ul>
+          <% end %>
+        </nav>
+
+        <% flash.each do |key, value| %>
+          <%= content_tag(:div, value, class: "#{key}") %>
+        <% end %>
+
+        <%= yield %>
+      </div>
+
+      <footer class = 'insta-gradation'>
+        <div class = 'footer'>
+          <p>Instagram Clone</p>
+          <p>by Ryohei Aoki</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
